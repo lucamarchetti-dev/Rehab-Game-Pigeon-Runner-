@@ -1,0 +1,134 @@
+/* =========================================================
+   Game embedding
+   The games keep their own CSS and logic. These rules only
+   fit them into the website shell and remove duplicated chrome.
+   Specificity is intentionally higher than the game stylesheets
+   because game CSS is loaded later (lazy chunks).
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Outlaw Run
+   --------------------------------------------------------- */
+
+.game-frame .outlaw-run {
+  width: 100%;
+  min-height: 0;
+}
+
+.game-frame .outlaw-run .app-header,
+.game-frame .outlaw-run .outlaw-intro,
+.game-frame .outlaw-run .app-footer {
+  display: none;
+}
+
+.game-frame .outlaw-run .game-stats {
+  margin: 0 auto 12px;
+  padding: 9px 18px;
+  background: color-mix(in srgb, #754703 78%, transparent);
+  color: #fff3d6;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+}
+
+.game-frame .outlaw-run .game-main {
+  padding: 0;
+}
+
+.game-frame .outlaw-run .stage {
+  width: 100%;
+  max-width: 930px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  background: #2d2d2d;
+}
+
+.game-frame .outlaw-run .canvas {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* ---------------------------------------------------------
+   Pigeon Blaster
+   --------------------------------------------------------- */
+
+.game-frame .game-container {
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+}
+
+.game-frame .game-container .header-container,
+.game-frame .game-container .bottom-bar {
+  display: none;
+}
+
+.game-frame .game-container .hud-bar {
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  max-width: 100%;
+  margin: 0 auto 14px;
+  padding: 10px 22px;
+}
+
+.game-frame .game-container .hud-section + .hud-section {
+  padding-left: 22px;
+}
+
+.game-frame .game-container .controls-bar {
+  margin-bottom: 12px;
+}
+
+.game-frame .game-container .canvas-wrapper {
+  width: min(100%, 800px);
+  margin: 0 auto;
+  border-width: clamp(4px, 1vw, 8px);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.game-frame .game-container .game-canvas {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+@media (max-width: 620px) {
+  .game-frame .game-container .hud-bar {
+    width: 100%;
+    gap: 10px 14px;
+    padding: 9px 12px;
+  }
+
+  .game-frame .game-container .hud-section {
+    min-width: 54px;
+  }
+
+  .game-frame .game-container .hud-section + .hud-section {
+    padding-left: 12px;
+  }
+
+  .game-frame .game-container .hud-value {
+    font-size: 20px;
+  }
+
+  .game-frame .game-container .hud-timer {
+    min-width: 120px;
+  }
+
+  .game-frame .game-container .controls-bar {
+    gap: 10px;
+  }
+
+  .game-frame .game-container .camera-label {
+    font-size: 13px;
+  }
+
+  .game-frame .game-container .camera-select {
+    max-width: 160px;
+    font-size: 13px;
+  }
+}
