@@ -418,7 +418,7 @@ button {
 }
 
 .brand__mark img {
-  width: 27px;
+  width: px;
   height: 27px;
   image-rendering: pixelated;
 }
