@@ -566,6 +566,41 @@ const it = {
     licenseCta: 'Leggi il testo della licenza',
   },
 
+
+  team: {
+    eyebrow: 'Il team dietro il progetto',
+    title: 'Conosci il team.',
+    intro:
+      'Quattro persone, un’idea condivisa e la voglia di trasformarla in qualcosa di concreto.',
+
+    photoAlt: 'Il team di sviluppo di Pigeon Runner',
+
+    storyEyebrow:
+      'Pigeon Runner è nato durante il Body Motion & AI Hackathon (https://johnnypax.github.io/its-ict-body-detection-challenge/), organizzato dall’ITS Academy Lanciano e dal docente Giovanni Pace. La sfida ci ha portati a esplorare le potenzialità di TensorFlow.js, una libreria JavaScript/TypeScript dedicata al machine learning. L’obiettivo principale del contest era usare il corpo come interfaccia, sviluppando un’applicazione in React e TypeScript capace di elaborare il movimento umano in tempo reale tramite webcam e il modello MoveNet, superando l’uso di tastiera e mouse.',
+
+    storyTitle:
+      'Abbiamo sviluppato Pigeon Runner con un obiettivo preciso: unire tecnologia, creatività e divertimento per dare vita a un’esperienza interattiva con una finalità concreta. Dalla progettazione delle funzionalità alla realizzazione dei giochi, ogni scelta è stata il risultato di un lavoro condiviso, in cui idee e competenze diverse si sono unite per trasformare un’intuizione in un progetto funzionante. Volevamo superare i limiti dell’interazione digitale tradizionale, spesso sedentaria o poco accessibile, trasformando l’esercizio e la riabilitazione motoria in un’esperienza ludica e stimolante grazie all’intelligenza artificiale applicata in tempo reale.',
+
+    peopleEyebrow:
+      'Siamo un team di quattro persone, accomunate dalla curiosità e dalla voglia di creare qualcosa che fosse davvero utile. La domanda da cui siamo partiti è stata semplice: come possiamo utilizzare la tecnologia per offrire un’esperienza accessibile, coinvolgente e capace di rispondere a un’esigenza reale?',
+
+    peopleDescription:
+      'La nostra risposta è stata Pigeon Runner: un progetto che propone due minigiochi pensati per incoraggiare il movimento degli arti superiori e inferiori attraverso un’esperienza ludica. L’idea è rendere l’attività più coinvolgente, con particolare attenzione alle persone con mobilità ridotta. Il progetto si rivolge sia a utenti in fase di riabilitazione motoria sia a chi desidera svolgere esercizio fisico in modo alternativo. L’interazione avviene interamente via webcam tramite il tracciamento dei keypoint corporei, offrendo controlli flessibili e soglie adattabili alle singole capacità motorie.',
+
+    peopleStory:
+      'Dopo aver definito l’idea e gli obiettivi, abbiamo organizzato il lavoro valorizzando gli interessi e le competenze di ciascun componente. Ci siamo occupati di aspetti diversi, dalla progettazione grafica allo sviluppo del codice, fino all’integrazione delle funzionalità e alla realizzazione del prodotto finale. Questo approccio ci ha permesso di confrontarci, condividere idee e affrontare insieme le sfide tecniche incontrate durante lo sviluppo. Il nostro team si è diviso tra UI/UX design, sviluppo frontend con React e TypeScript, integrazione del modello MoveNet con TensorFlow.js e logica dei minigiochi, affrontando problemi complessi come l’ottimizzazione del tracciamento in tempo reale e la gestione delle variazioni di luce e inquadratura della webcam.',
+
+    peopleConclusion:
+      'Siamo orgogliosi del risultato raggiunto, non soltanto per ciò che abbiamo realizzato, ma anche per il percorso che ci ha permesso di farlo. Pigeon Runner rappresenta la nostra capacità di collaborare, sperimentare e trasformare un’idea in una soluzione concreta. Il nostro obiettivo è continuare a migliorarlo, rendendolo sempre più accessibile, coinvolgente e utile. In futuro vorremmo sviluppare nuovi minigiochi focalizzati su altri gruppi muscolari, integrare un sistema di monitoraggio dei progressi motori nel tempo e ampliare le opzioni di personalizzazione dell’accessibilità.',
+
+    peopleTitle: 'Gli sviluppatori di Pigeon Runner',
+
+    projectTitle: 'Vuoi scoprire Pigeon Runner?',
+    projectText:
+      'Esplora il codice sorgente, scopri le tecnologie utilizzate e approfondisci le scelte progettuali che hanno dato vita al progetto.',
+    repositoryCta: 'Esplora il repository',
+  },
+  
   notFound: {
     eyebrow: 'Errore 404',
     title: 'Ohoh! Questo piccione ha preso un ostacolo.',
@@ -1127,6 +1162,40 @@ const en: typeof it = {
     licenseText:
       'The project is released under the GNU General Public License v3.0. You may use, study, modify and distribute the software; modified versions must be distributed under the same licence. The software comes with no warranty.',
     licenseCta: 'Read the licence text',
+  },
+
+  team: {
+    eyebrow: 'The team behind the project',
+    title: 'Meet the team.',
+    intro:
+      'Four people, a shared vision, and the drive to turn it into something concrete.',
+    
+    photoAlt: 'The Pigeon Runner development team',
+    
+    storyEyebrow:
+      'Pigeon Runner was created during the Body Motion & AI Hackathon (https://johnnypax.github.io/its-ict-body-detection-challenge/), organized by ITS Academy Lanciano and instructor Giovanni Pace. The challenge led us to explore the capabilities of TensorFlow.js, a JavaScript/TypeScript library dedicated to machine learning. The primary goal of the contest was to use the body as an interface, developing a React and TypeScript application capable of processing human movement in real time via webcam and the MoveNet model, moving beyond traditional keyboard and mouse input.',
+    
+    storyTitle:
+      'We developed Pigeon Runner with a clear goal: combining technology, creativity, and fun to bring an interactive experience with a practical purpose to life. From feature design to game development, every decision was the result of collaborative teamwork where different ideas and skill sets came together to turn an intuition into a working project. We wanted to overcome the limitations of traditional digital interaction—often sedentary or lacking accessibility—by transforming exercise and motor rehabilitation into a playful, engaging experience powered by real-time artificial intelligence.',
+    
+    peopleEyebrow:
+      'We are a team of four, united by curiosity and the desire to build something truly useful. Our starting question was simple: how can we leverage technology to offer an accessible, engaging experience that meets a real need?',
+    
+    peopleDescription:
+      'Our answer was Pigeon Runner: a project featuring two mini-games designed to encourage upper and lower limb movement through a playful experience. The goal is to make physical activity more engaging, with a special focus on individuals with reduced mobility. The project targets both users undergoing motor rehabilitation and anyone looking for an alternative way to exercise. Interaction takes place entirely via webcam through body keypoint tracking, offering flexible controls and thresholds adaptable to individual motor abilities.',
+    
+    peopleStory:
+      'After defining our idea and goals, we organized our workflow by valuing each team member’s interests and skills. We handled different areas—from graphic design and coding to feature integration and final product delivery. This approach allowed us to brainstorm, share ideas, and tackle technical challenges together. Our team split responsibilities across UI/UX design, frontend development with React and TypeScript, MoveNet integration with TensorFlow.js, and mini-game logic, solving complex issues such as real-time tracking optimization and handling webcam lighting and framing variations.',
+    
+    peopleConclusion:
+      'We are proud of what we achieved, not only for the final result, but also for the journey that brought us here. Pigeon Runner showcases our ability to collaborate, experiment, and transform an idea into a tangible solution. Our goal is to keep improving it, making it even more accessible, engaging, and useful. Moving forward, we plan to develop new mini-games targeting other muscle groups, integrate a system to track motor progress over time, and expand accessibility customization options.',
+    
+    peopleTitle: 'The developers behind Pigeon Runner',
+    
+    projectTitle: 'Want to discover Pigeon Runner?',
+    projectText:
+      'Explore the source code, discover the technologies used, and learn more about the design decisions that brought this project to life.',
+    repositoryCta: 'Explore the repository',
   },
 
   notFound: {

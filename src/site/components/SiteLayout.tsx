@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useI18n } from '../i18n'
+import { useI18n } from '../useI18n'
 import { SiteFooter } from './SiteFooter'
 import { SiteHeader } from './SiteHeader'
 

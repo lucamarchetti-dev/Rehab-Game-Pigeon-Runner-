@@ -11,14 +11,14 @@ import { content, type Content, type Lang } from './content'
 
 const STORAGE_KEY = 'cdp-language'
 
-interface I18nValue {
+export interface I18nValue {
   lang: Lang
   setLang: (lang: Lang) => void
   toggleLang: () => void
   t: Content
 }
 
-const I18nContext = createContext<I18nValue | null>(null)
+export const I18nContext = createContext<I18nValue | null>(null)
 
 function readInitialLang(): Lang {
   try {
@@ -56,10 +56,4 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   )
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
-}
-
-export function useI18n(): I18nValue {
-  const value = useContext(I18nContext)
-  if (!value) throw new Error('useI18n must be used inside I18nProvider')
-  return value
 }

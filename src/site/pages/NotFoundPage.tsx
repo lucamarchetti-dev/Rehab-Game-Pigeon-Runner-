@@ -1,5 +1,5 @@
 import piccioneTerra from '../../assets/png/piccione-terra.png'
-import { useI18n } from '../i18n'
+import { useI18n } from '../useI18n'
 import { Link } from '../router'
 import { ArrowRightIcon } from '../components/Icons'
 

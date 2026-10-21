@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { SiteLayout } from './site/components/SiteLayout'
-import { I18nProvider, useI18n } from './site/i18n'
+import { I18nProvider } from './site/i18n'
+import { useI18n } from './site/useI18n.ts'
 import { ThemeProvider } from './site/theme'
 import { usePath } from './site/router'
 import { AboutPage } from './site/pages/AboutPage'

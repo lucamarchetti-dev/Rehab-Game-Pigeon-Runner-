@@ -3,7 +3,7 @@ import sfondoCielo from '../../assets/png/sfondo-cielo.png'
 import piccioneVolante from '../../assets/png/piccione-volante-2.png'
 import piccioneTerra from '../../assets/png/piccione-terra.png'
 import { asset } from '../assets'
-import { useI18n } from '../i18n'
+import { useI18n } from '../useI18n'
 import { Link, navigate } from '../router'
 import {
   ArrowRightIcon,

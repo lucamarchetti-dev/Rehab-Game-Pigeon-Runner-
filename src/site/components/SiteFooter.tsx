@@ -1,5 +1,5 @@
 import { siteConfig } from '../config'
-import { useI18n } from '../i18n'
+import { useI18n } from '../useI18n'
 import { Link } from '../router'
 import { ArrowUpRightIcon } from './Icons'
 import { Brand } from './SiteHeader'

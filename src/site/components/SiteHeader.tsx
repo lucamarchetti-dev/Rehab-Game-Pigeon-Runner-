@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from 'react'
 import pigeonLogo from '../../assets/Pigeon.png'
-import { useI18n } from '../i18n'
+import { useI18n } from '../useI18n'
 import { isActivePath, Link, usePath } from '../router'
 import { useTheme } from '../theme'
 import {
