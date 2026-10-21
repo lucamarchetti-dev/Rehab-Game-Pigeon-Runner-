@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './PigeonBlaster.css'; 
 import * as tf from '@tensorflow/tfjs';
 import * as poseDetection from '@tensorflow-models/pose-detection';
-import { drawKeypoints, drawArm, getKeypoint } from '../pose-utils'; 
+import { getKeypoint } from '../pose-utils'; 
 import piccioneTerra from '../assets/png/piccione-terra.png';
 import piccione_volante from '../assets/png/PIGGEONNN.gif';
 import cuoricino_vite from '../assets/png/cuoricino-vite.png';
@@ -44,7 +44,6 @@ function extractGifFrames(anim: any): HTMLCanvasElement[] {
     // Applica l'eventuale "pulizia" richiesta dal frame precedente PRIMA di disegnare questo
     if (disposePrevious) {
       disposePrevious();
-      disposePrevious = null;
     }
 
     workCtx.drawImage(frame.buffer, frame.x, frame.y);
@@ -197,7 +196,7 @@ function PigeonBlaster({ onBack }: PigeonBlasterProps) {
   const difficultyRef = useRef(DIFFICULTIES.easy);
 
   const [score, setScore] = useState(0);
-  const [lives, setLives] = useState(DIFFICULTIES.easy.maxLives);
+  const [, setLives] = useState(DIFFICULTIES.easy.maxLives);
   const [highScore, setHighScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
   const [isVictory, setIsVictory] = useState(false);
@@ -821,7 +820,7 @@ function PigeonBlaster({ onBack }: PigeonBlasterProps) {
       <div className="header-container">
         <img src={piccioneTerra} alt="Piccione decorativo sinistro" className="pigeon-decor pigeon-left" />
         <div className="title-wrapper">
-          <h1 className="main-title">Pigeon Blaster</h1>
+          <h2 className="main-title">Pigeon Blaster</h2>
           <span className="subtitle">rehab edition</span>
         </div>
         <img src={piccioneTerra} alt="Piccione decorativo destro" className="pigeon-decor pigeon-right" />

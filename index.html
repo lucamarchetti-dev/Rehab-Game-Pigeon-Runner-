@@ -1,10 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pose-browser-demo</title>
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta
+      name="description"
+      content="Circolo dei Piccioni — due minigiochi di riabilitazione controllati con il corpo. Riconoscimento della postura interamente nel browser con TensorFlow.js e MoveNet."
+    />
+    <meta name="theme-color" content="#f5eee1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1d120c" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="application-name" content="Circolo dei Piccioni" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Circolo dei Piccioni" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:title" content="Circolo dei Piccioni — Rehab Games" />
+    <meta
+      property="og:description"
+      content="La riabilitazione, rimessa in gioco. Due minigiochi controllati con il corpo, riconoscimento della posa nel browser."
+    />
+    <meta property="og:image" content="%BASE_URL%images/country1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Circolo dei Piccioni — Rehab Games</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Circolo dei Piccioni",
+        "alternateName": "Circolo dei Piccioni — Rehab Games",
+        "description": "Due minigiochi di riabilitazione controllati con il corpo. La postura viene riconosciuta nel browser con TensorFlow.js e MoveNet.",
+        "inLanguage": ["it", "en"]
+      }
+    </script>
+
+    <script>
+      /* Apply the saved theme before the first paint to avoid a flash. */
+      (function () {
+        try {
+          var saved = localStorage.getItem('cdp-theme');
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          document.documentElement.dataset.theme = 'light';
+        }
+
+        /* Route restored after a GitHub Pages 404 redirect. */
+        try {
+          var redirect = sessionStorage.getItem('cdp-spa-redirect');
+          if (redirect) {
+            sessionStorage.removeItem('cdp-spa-redirect');
+            history.replaceState(null, '', redirect);
+          }
+        } catch (error) {
+          /* no-op */
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>

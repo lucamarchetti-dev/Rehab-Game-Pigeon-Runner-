@@ -13,6 +13,8 @@ export function usePoseDetector() {
   const lastPoseRef = useRef<Pose | null>(null);
 
   useEffect(() => {
+    const video = videoRef.current;
+
     async function initialize() {
       await tf.setBackend('webgl');
       await tf.ready();
@@ -27,16 +29,15 @@ export function usePoseDetector() {
         audio: false,
       });
 
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        videoRef.current.play();
+      if (video) {
+        video.srcObject = stream;
+        video.play();
       }
     }
 
     initialize();
 
     return () => {
-      const video = videoRef.current;
       if (video?.srcObject) {
         (video.srcObject as MediaStream).getTracks().forEach(t => t.stop());
       }

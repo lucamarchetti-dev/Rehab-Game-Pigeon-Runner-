@@ -9,6 +9,7 @@ import { GameCanvas } from './GameCanvas';
 import type { Obstacle } from '../game/obstacle-spawner';
 import type { Lane } from '../game/lane-detector';
 import type { Pose } from '@tensorflow-models/pose-detection/dist/types';
+import { asset } from '../site/assets';
 import './OutlawRun.css';
 
 // Carica le immagini degli ostacoli una volta sola
@@ -16,7 +17,7 @@ const OBSTACLE_KEYS = ['cespuglio.png', 'cactus.png', 'barile.png'];
 const obstacleImages: Record<string, HTMLImageElement> = {};
 OBSTACLE_KEYS.forEach(key => {
   const img = new Image();
-  img.src = `/obstacles/${key}`;
+  img.src = asset(`obstacles/${key}`);
   obstacleImages[key] = img;
 });
 
@@ -76,13 +77,13 @@ export default function OutlawRun({ onBack }: OutlawRunProps) { //onBack aggiunt
   useGameLoop(gameLoop, true);
 
   return (
-     <div className="app-container">
+     <div className="app-container outlaw-run">
       {/* HEADER */}
       <header className="app-header">
-        <h1>Outlaw Run</h1>
+        <h2 className="outlaw-title">Outlaw Run</h2>
       </header>
 
-      <p>Chi l'ha detto che la riabilitazione è solo noia? Metti in moto le gambe, schiva cactus, barili e cespugli come un vero cowboy e trasforma la tua terapia nella sfida pixelata più divertente del West!</p>
+      <p className="outlaw-intro">Chi l'ha detto che la riabilitazione è solo noia? Metti in moto le gambe, schiva cactus, barili e cespugli come un vero cowboy e trasforma la tua terapia nella sfida pixelata più divertente del West!</p>
 
       <div className="game-stats">
           <span>Punteggio: {state.score}</span>
@@ -109,7 +110,6 @@ export default function OutlawRun({ onBack }: OutlawRunProps) { //onBack aggiunt
       <footer className="app-footer">
         <h3>Usa i movimenti del corpo per giocare | Alimentato da TensorFlow.js</h3>
         <button className="btn-back-outlaw" onClick={onBack}>⬅ Torna al Menu</button>
-      </footer>
-    </div>
+      </footer>    </div>
   );
 }

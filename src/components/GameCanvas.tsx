@@ -3,13 +3,14 @@ import type { Pose } from '@tensorflow-models/pose-detection/dist/types';
 import type { Obstacle } from '../game/obstacle-spawner';
 import type { Lane } from '../game/lane-detector';
 import type { GameState } from '../hooks/useGameState';
+import { asset } from '../site/assets';
 
 
 const playerImage = new Image();
-playerImage.src = '/player.png';
+playerImage.src = asset('player.png');
 
 const backgroundImage = new Image();
-backgroundImage.src = '/farwest_road.jpeg';
+backgroundImage.src = asset('farwest_road.jpeg');
 
 const LANE_COLORS = {
   left:   'rgba(255,255,255,0.08)',
