@@ -1,7 +1,9 @@
 import { siteConfig } from '../config'
 import { useI18n } from '../useI18n'
 import { ArrowUpRightIcon } from '../components/Icons'
-import teamPhoto from '../../assets/png/piccione-terra.png'
+import teamPhoto1 from '../../assets/png/Team.jpeg'
+// Sostituisci questo percorso con la seconda foto che vuoi inserire:
+import teamPhoto2 from '../../assets/png/WorkingTeam.jpeg'
 
 export function CreditsPage() {
   const { t } = useI18n()
@@ -23,13 +25,22 @@ export function CreditsPage() {
 
       <section className="section team-section">
         <div className="container">
-          {/* Banner Foto Team (Ampio, senza card) */}
-          <div className="team-photo-banner">
-            <img
-              src={teamPhoto}
-              alt={team.photoAlt}
-              loading="eager"
-            />
+          {/* Griglia con le 2 Foto del Team */}
+          <div className="team-photo-grid">
+            <div className="team-photo-item">
+              <img
+                src={teamPhoto1}
+                alt={team.photoAlt}
+                loading="eager"
+              />
+            </div>
+            <div className="team-photo-item">
+              <img
+                src={teamPhoto2}
+                alt={team.photoAlt}
+                loading="eager"
+              />
+            </div>
           </div>
 
           {/* Storia dell'Hackathon e del progetto */}
